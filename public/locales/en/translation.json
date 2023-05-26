@@ -1,5 +1,6 @@
 {
   "text": "Text for example",
   "lang": "English",
-  "main": "Main page"
+  "main": "Main page",
+  "notFound": "Page not found"
 }
