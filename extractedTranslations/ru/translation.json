@@ -1,6 +1,8 @@
 {
   "about": "about",
+  "error": "error",
   "lang": "lang",
   "main": "main",
-  "notFound": "notFound"
+  "notFound": "notFound",
+  "reload": "reload"
 }

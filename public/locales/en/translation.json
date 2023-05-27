@@ -2,5 +2,7 @@
   "text": "Text for example",
   "lang": "English",
   "main": "Main page",
-  "notFound": "Page not found"
+  "notFound": "Page not found",
+  "error": "Unexpected error occured",
+  "reload": "Reload"
 }
