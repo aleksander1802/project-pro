@@ -5,7 +5,6 @@ module.exports = {
     jest: true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recomended'],
-  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -27,10 +26,18 @@ module.exports = {
     'import-extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-internal-string': ['error', { markupOnly: true }],
-    'max-len': ['error', { 'ignore-comments': true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+    'max-len': ['error', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}', '**/src/**/*.test.ts', '**/src/**/*.test.tsx'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };

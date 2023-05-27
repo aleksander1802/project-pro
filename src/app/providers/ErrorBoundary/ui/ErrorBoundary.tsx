@@ -28,11 +28,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     const { hasError } = this.state;
     const { children } = this.props;
     if (hasError) {
-      return (
-        <Suspense fallback="">
-          <PageError />;
-        </Suspense>
-      );
+      return <PageError />;
     }
 
     return children;
