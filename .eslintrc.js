@@ -30,6 +30,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+    'comma-dangle': 'off',
     'i18next/no-literal-string': [
       'error',
       {
@@ -37,6 +38,12 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
+    'object-curly-spacing': 'off',
+    'no-unexpected-multiline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'object-curly-newline': ['error', { multiline: true, minProperties: 1 }],
+    'object-curly-newline': ['error', 'never'],
+
     'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
