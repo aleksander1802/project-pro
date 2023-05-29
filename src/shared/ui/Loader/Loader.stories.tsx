@@ -4,10 +4,16 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Loader } from './Loader';
 
-export default {title: 'shared/Loader',
+export default {
+  title: 'shared/Loader',
   component: Loader,
-  argTypes: {backgroundColor: { control: 'color' }},
-  args: {to: '/'}} as ComponentMeta<typeof Loader>;
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+  args: {
+    to: '/',
+  },
+} as ComponentMeta<typeof Loader>;
 
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 

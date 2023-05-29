@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-  className?: string;
+    className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -23,8 +23,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
       data-testid="sidebar"
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
     >
-      <Button data-testid="sidebar-toggle" onClick={onToggle}>
-        {t('toggle')}
+      <Button
+        data-testid="sidebar-toggle"
+        onClick={onToggle}
+      >
+        {t('Переключить')}
       </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />

@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
     "outDir": "./dist/",
 
     "noImplicitAny": true,
     "module": "ESNext",
 
-    "target": "es5",
     "jsx": "react-jsx",
 
     "allowJs": true,
     "moduleResolution": "node",
+
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
