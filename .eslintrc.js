@@ -31,8 +31,10 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
+
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+
     'i18next/no-literal-string': [
       'error',
       {
@@ -40,8 +42,8 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
-    'comma-dangle': ['error', 'only-multiline'],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'comma-dangle': 'off',
 
     'react/prop-types': 'off',
     'react/display-name': 'off',
@@ -55,6 +57,8 @@ module.exports = {
     '@typescript-eslint/no-var-reqiures': 'off',
     'react/jsx-uses-react': 'off',
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
+    'linebreak-style': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
   globals: {
     __IS_DEV__: true,

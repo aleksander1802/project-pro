@@ -32,11 +32,7 @@ export const Button: FC<ButtonProps> = (props) => {
   };
 
   return (
-    <button
-      type="button"
-      className={classNames(cls.Button, mods, [className])}
-      {...otherProps}
-    >
+    <button type="button" className={classNames(cls.Button, mods, [className])} {...otherProps}>
       {children}
     </button>
   );
