@@ -12,5 +12,7 @@
   "О сайте": "About us",
   "Переключить": "Переключить",
   "Короткий язык": "En",
-  "enter": "Sign In"
+  "enter": "Sign In",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }
