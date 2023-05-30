@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -42,9 +42,9 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
-    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'max-len': ['error', { ignoreComments: true, code: 220 }],
     'comma-dangle': 'off',
-
+    'react/button-has-type': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -59,15 +59,20 @@ module.exports = {
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'linebreak-style': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
   },
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+        'max-len': 'off'
       },
     },
   ],
