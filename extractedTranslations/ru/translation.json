@@ -12,6 +12,8 @@
   "log": "log",
   "logout": "logout",
   "password": "password",
+  "profile": "profile",
+  "profilePage": "profilePage",
   "throw error": "throw error",
   "userName": "userName",
   "Главная": "Главная",

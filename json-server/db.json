@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "firstname": "Darrell",
+    "lastname": "Reiss",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Mariupol",
+    "username": "admin",
+    "avatar": "https://rare-gallery.com/mocahbig/80842-anime-girl-anime-artist-artwork-digital-art-hd.jpg"
+  }
 }

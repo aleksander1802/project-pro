@@ -19,5 +19,7 @@
   "password": "Enter password",
   "autorizationForm": "Autorization form",
   "errorLogin": "Login or password incorrect",
-  "logout": "Log out"
+  "logout": "Log out",
+  "profilePage": "Profile page",
+  "profile": "Profile"
 }
