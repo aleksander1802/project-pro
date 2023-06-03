@@ -2,15 +2,20 @@ import {
   DeepPartial,
   ReducersMapObject,
   configureStore,
+  getDefaultMiddleware,
 } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
+import { $api } from 'shared/api/api';
+import { To } from 'history';
+import { NavigateOptions } from 'react-router';
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
 export const createReduxStore = (
   initialState?: StateSchema,
   asyncReducers?: ReducersMapObject<StateSchema>,
+  navigate?: (to: To, options?: NavigateOptions) => void,
 ) => {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
@@ -20,10 +25,19 @@ export const createReduxStore = (
 
   const reducerManager = createReducerManager(rootReducers);
 
-  const store = configureStore<StateSchema>({
+  const store = configureStore({
     reducer: reducerManager.reduce,
     devTools: __IS_DEV__,
     preloadedState: initialState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: {
+            api: $api,
+            navigate,
+          },
+        },
+      }),
   });
 
   // @ts-ignore
