@@ -1,17 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/storeProvider';
-import axios from 'axios';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
 interface LoginByUsernameProps {
   username: string;
   password: string;
-}
-
-enum LoginErrors {
-  INCORRECT_DATA = '',
-  SERVER_ERROR = '',
 }
 
 export const loginByUsername = createAsyncThunk<
@@ -36,7 +30,6 @@ export const loginByUsername = createAsyncThunk<
       );
       dispatch(userActions.setAuthData(response.data));
 
-      extra.navigate('/about');
       return response.data;
     } catch (err) {
       return rejectWithValue('error');
