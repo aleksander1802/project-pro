@@ -12,5 +12,10 @@
   "yourUsername": "Веедите имя пользователя",
   "yourAvatar": "Введите ссылку на аватар",
   "yourCurrency": "Укажите валюту",
-  "yourCountry": "Укажите страну"
+  "yourCountry": "Укажите страну",
+  "errorServer": "Серверная ошибка",
+  "errorUserCountry": "Некорректный регион",
+  "errorData": "Данные не указаны",
+  "errorUserData": "Имя и фамилия обязательны",
+  "errorUserAge": "Некорректный возраст"
 }

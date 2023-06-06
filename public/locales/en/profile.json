@@ -12,5 +12,10 @@
   "yourUsername": "Enter your username",
   "yourAvatar": "Enter link to your avatar",
   "yourCurrency": "Select currency",
-  "yourCountry": "Select country"
+  "yourCountry": "Select country",
+  "errorServer": "Server Error",
+  "errorUserCountry": "Incorrect country",
+  "errorData": "Data is not specified",
+  "errorUserData": "First and last name are required",
+  "errorUserAge": "Incorrect age"
 }
