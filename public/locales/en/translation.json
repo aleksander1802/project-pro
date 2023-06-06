@@ -21,5 +21,6 @@
   "errorLogin": "Login or password incorrect",
   "logout": "Log out",
   "profilePage": "Profile page",
-  "profile": "Profile"
+  "profile": "Profile",
+  "yourCurrency": "Select currency"
 }

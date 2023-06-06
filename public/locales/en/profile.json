@@ -1,6 +1,16 @@
 {
   "edit": "Edit",
+  "profile": "Profile",
+  "error": "An error has occurred",
+  "errorUpdate": "Try to reload the page",
+  "cancel": "Cancel",
+  "save": "Save",
   "yourName": "Your name",
   "yourSurname": "Your surname",
-  "profile": "Profile"
+  "yourAge": "Your age",
+  "yourCity": "Your city",
+  "yourUsername": "Enter your username",
+  "yourAvatar": "Enter link to your avatar",
+  "yourCurrency": "Select currency",
+  "yourCountry": "Select country"
 }
