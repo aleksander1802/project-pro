@@ -1,0 +1,25 @@
+{
+  "React Functional Component": {
+    "prefix": "stories",
+    "body": [      
+      "import { ComponentStory, ComponentMeta } from '@storybook/react';",
+      "import { $TM_FILENAME_BASE } from './$TM_FILENAME_BASE';",
+      "",
+      "export default {",
+      "title: 'widget/$TM_FILENAME_BASE',",
+      "component: $TM_FILENAME_BASE,",
+      "argTypes: {",
+      "backgroundColor: { control: 'color' },",
+      " },",
+      "} as ComponentMeta<typeof $TM_FILENAME_BASE>;",
+      "",
+      "const Template: ComponentStory<typeof $TM_FILENAME_BASE> = (args) => (",
+      "<$TM_FILENAME_BASE {...args} />",
+      ");",
+      "",
+      "export const Light = Template.bind({});",
+      "Light.args = {};"
+    ],
+    "description": "React Functional Component"
+  }
+}
