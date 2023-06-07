@@ -24,5 +24,7 @@
   "profile": "Profile",
   "yourCurrency": "Select currency",
   "error": "An error has occurred",
-  "article": "Articles"
+  "article": "Articles",
+  "articleMissing": "Article is missing",
+  "articleError": "An error occurred while loading the article"
 }
