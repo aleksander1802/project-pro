@@ -22,5 +22,6 @@
   "logout": "Log out",
   "profilePage": "Profile page",
   "profile": "Profile",
-  "yourCurrency": "Select currency"
+  "yourCurrency": "Select currency",
+  "error": "An error has occurred"
 }
