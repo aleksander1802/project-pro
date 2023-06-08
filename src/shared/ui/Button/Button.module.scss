@@ -2,6 +2,16 @@
   cursor: pointer;
   color: var(--primary-color);
   padding: 6px 15px;
+  
+  &:hover {
+    color: var(--inverted-primary-color);
+    fill: var(--inverted-bg-color);    
+    stroke: var(--inverted-primary-color);
+    path {
+      fill: var(--inverted-bg-color);   
+      stroke: var(--inverted-primary-color);
+    }
+  }
 }
 
 .clear,
