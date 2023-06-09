@@ -3,14 +3,14 @@
   "Перевод": "Translate",
   "Главная страница": "Main page",
   "Язык": "English",
-  "новый перевод": "новый перевод",
+  "новый перевод": "New translation",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Reload page",
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
-  "Переключить": "Переключить",
+  "Переключить": "Switch",
   "Короткий язык": "En",
   "Войти": "Login",
   "increment": "increment",
@@ -23,10 +23,12 @@
   "Укажите валюту": "Choose currency",
   "Укажите страну": "Choose country",
   "Профиль": "Profile",
-  "Статья не найдена": "Статья не найдена",
+  "Статья не найдена": "Article not found",
   "Статьи": "Articles",
   "Произошла ошибка при загрузке статьи": {
-    "": "Произошла ошибка при загрузке статьи."
+    "": "An error occurred while loading the article."
   },
-  "Комментарии отсутствуют": "Комментарии отсутствуют"
+  "Комментарии отсутствуют": "There are no comments",
+  "enterTextComment": "Enter the comment text",
+  "submit": "Submit"
 }

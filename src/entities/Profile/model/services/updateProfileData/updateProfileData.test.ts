@@ -1,18 +1,20 @@
 import { userActions } from 'entities/User';
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { ValidateProfileError } from 'entities/Profile';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
   username: 'admin',
-  age: 22,
-  country: Country.Ukraine,
-  lastname: 'ulbi tv',
-  first: 'asd',
+  age: 29,
+  country: Country.Russia,
+  lastname: 'aleksander1802',
+  firstname: 'asd',
   city: 'asf',
-  currency: Currency.USD,
+  currency: Currency.RUB,
+  id: '1',
 };
 
 describe('updateProfileData.test', () => {
@@ -43,9 +45,7 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([
-      ValidateProfileError.SERVER_ERROR,
-    ]);
+    expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR]);
   });
 
   test('validate error', async () => {
@@ -57,8 +57,6 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([
-      ValidateProfileError.INCORRECT_USER_DATA,
-    ]);
+    expect(result.payload).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
   });
 });

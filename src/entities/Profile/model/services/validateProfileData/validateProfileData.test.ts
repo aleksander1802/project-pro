@@ -5,12 +5,12 @@ import { validateProfileData } from './validateProfileData';
 
 const data = {
   username: 'admin',
-  age: 22,
-  country: Country.Ukraine,
-  lastname: 'ulbi tv',
-  first: 'asd',
+  age: 29,
+  country: Country.Russia,
+  lastname: 'aleksander1802',
+  firstname: 'asd',
   city: 'asf',
-  currency: Currency.USD,
+  currency: Currency.RUB,
 };
 
 describe('validateProfileData.test', () => {
@@ -21,7 +21,7 @@ describe('validateProfileData.test', () => {
   });
 
   test('without first and last name', async () => {
-    const result = validateProfileData({ ...data, first: '', lastname: '' });
+    const result = validateProfileData({ ...data, firstname: '', lastname: '' });
 
     expect(result).toEqual([
       ValidateProfileError.INCORRECT_USER_DATA,
