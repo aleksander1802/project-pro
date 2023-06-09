@@ -1,76 +1,64 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Theme } from 'app/providers/ThemeProvider';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Text, TextSize, TextTheme } from './Text';
+import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
-  title: 'shared/Text',
-  component: Text,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+    title: 'shared/Text',
+    component: Text,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title:
-    'Title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores?',
-  text: 'Text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci. Dolor sapiente odit excepturi nulla, itaque, tempora minima ipsum laborum vero iste quaerat consectetur libero, quas dolorem consequuntur repellat? Libero.',
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  title:
-    'Title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores?',
-  text: 'Text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci. Dolor sapiente odit excepturi nulla, itaque, tempora minima ipsum laborum vero iste quaerat consectetur libero, quas dolorem consequuntur repellat? Libero.',
-  theme: TextTheme.ERROR,
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    theme: TextTheme.ERROR,
 };
 
 export const onlyTitle = Template.bind({});
 onlyTitle.args = {
-  title:
-    'Title Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, libero.',
+    title: 'Title lorem ipsun',
 };
 
 export const onlyText = Template.bind({});
 onlyText.args = {
-  text: 'Text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, optio. Deserunt dolorem excepturi necessitatibus laborum molestiae placeat iste libero a, quisquam ullam facere? Id excepturi inventore tempora unde, beatae facere.',
+    text: 'Description Description Description Description',
 };
 
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
-  title:
-    'Title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores?',
-  text: 'Text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci. Dolor sapiente odit excepturi nulla, itaque, tempora minima ipsum laborum vero iste quaerat consectetur libero, quas dolorem consequuntur repellat? Libero.',
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTitleDark = Template.bind({});
 onlyTitleDark.args = {
-  title:
-    'Title Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, libero.',
+    title: 'Title lorem ipsun',
 };
 onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const onlyTextDark = Template.bind({});
 onlyTextDark.args = {
-  text: 'Text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, optio. Deserunt dolorem excepturi necessitatibus laborum molestiae placeat iste libero a, quisquam ullam facere? Id excepturi inventore tempora unde, beatae facere.',
+    text: 'Description Description Description Description',
 };
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const sizeL = Template.bind({});
-sizeL.args = {
-  title: 'Lorem ipsum dolor sit amet.',
-  text: 'Text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, optio. Deserunt dolorem excepturi necessitatibus laborum molestiae placeat iste libero a, quisquam ullam facere? Id excepturi inventore tempora unde, beatae facere.',
-  size: TextSize.L,
-};
-
-export const sizeM = Template.bind({});
-sizeM.args = {
-  title: 'Lorem ipsum dolor sit amet.',
-  text: 'Text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, optio. Deserunt dolorem excepturi necessitatibus laborum molestiae placeat iste libero a, quisquam ullam facere? Id excepturi inventore tempora unde, beatae facere.',
-  size: TextSize.M,
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.L,
 };

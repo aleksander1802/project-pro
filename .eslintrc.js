@@ -42,7 +42,7 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to', 'name'],
       },
     ],
-    'max-len': ['error', { ignoreComments: true, code: 220 }],
+    'max-len': ['error', { ignoreComments: true, code: 240 }],
     'comma-dangle': 'off',
     'react/button-has-type': 'off',
     'react/prop-types': 'off',
