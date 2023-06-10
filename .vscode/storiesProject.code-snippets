@@ -17,8 +17,8 @@
       "<$TM_FILENAME_BASE {...args} />",
       ");",
       "",
-      "export const Light = Template.bind({});",
-      "Light.args = {};"
+      "export const Normal = Template.bind({});",
+      "Normal.args = {};"
     ],
     "description": "React Functional Component"
   }

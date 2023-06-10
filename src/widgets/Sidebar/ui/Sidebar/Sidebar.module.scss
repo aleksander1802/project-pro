@@ -16,6 +16,9 @@
 
 .lang {
   margin-left: 20px;
+  &:hover {
+    color: var(--inverted-primary-color);
+  }
 }
 
 .collapseBtn {
