@@ -7,21 +7,26 @@
     display: flex;
     align-items: center;
   }
+
   .username {
     margin-left: 8px;
   }
+
   .date {
     margin-left: auto;
   }
+
   .title {
     margin-top: 8px;
   }
+
   .img {
     width: 100%;
     max-height: 250px;
     object-fit: cover;
     margin: 16px 0;
   }
+
   .footer {
     display: flex;
     align-items: center;
@@ -44,16 +49,18 @@
     height: 200px;
     position: relative;
   }
+
   .img {
     width: 200px;
     height: 200px;
     object-fit: cover;
   }
+
   .date {
     position: absolute;
     right: 0;
     top: 0;
-    text-shadow: 0px 0px 1px white;
+    text-shadow: 0 0 1px white;
     display: none;
   }
 
@@ -62,12 +69,14 @@
     align-items: center;
     margin-top: 8px;
   }
+
   .types p {
     width: 115px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .views {
     margin-left: auto;
     margin-right: 8px;
@@ -87,6 +96,7 @@
   &:hover {
     filter: saturate(1.5);
     transform: translateY(-5px);
+
     .date {
       display: block;
     }
