@@ -45,5 +45,6 @@
   "ITArticleType": "IT",
   "allArticleType": "All",
   "economicArticleType": "Economic",
-  "scienceArticleType": "Science"
+  "scienceArticleType": "Science",
+  "recommendations": "Recommendations"
 }

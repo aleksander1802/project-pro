@@ -45,5 +45,6 @@
   "ITArticleType": "IT",
   "allArticleType": "Все",
   "economicArticleType": "Экономика",
-  "scienceArticleType": "Наука"
+  "scienceArticleType": "Наука",
+  "recommendations": "Рекомендации"
 }
