@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { ArticleView } from 'entities/Article/model/types/article';
 import ListIcon from 'shared/assets/icons/list-24-24.svg';
 import TileIcon from 'shared/assets/icons/tile-24-24.svg';
@@ -34,12 +34,14 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   return (
     <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
       {viewTypes.map((v) => (
-        <Button theme={ButtonTheme.CLEAR} onClick={onClick(v.view)}>
-          <Icon
-            Svg={v.icon}
-            className={classNames('', { [cls.selected]: v.view !== view })}
-          />
-        </Button>
+        <React.Fragment key={v.view}>
+          <Button theme={ButtonTheme.CLEAR} onClick={onClick(v.view)}>
+            <Icon
+              Svg={v.icon}
+              className={classNames('', { [cls.selected]: v.view !== view })}
+            />
+          </Button>
+        </React.Fragment>
       ))}
     </div>
   );
