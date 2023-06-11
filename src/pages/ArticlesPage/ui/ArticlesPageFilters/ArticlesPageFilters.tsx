@@ -86,9 +86,9 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     (value: ArticleType) => {
       dispatch(articlesPageActions.setType(value));
       dispatch(articlesPageActions.setPage(1));
-      debounceFetchData();
+      fetchData();
     },
-    [dispatch, debounceFetchData],
+    [dispatch, fetchData],
   );
 
   return (
