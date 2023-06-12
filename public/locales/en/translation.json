@@ -46,5 +46,8 @@
   "allArticleType": "All",
   "economicArticleType": "Economic",
   "scienceArticleType": "Science",
-  "recommendations": "Recommendations"
+  "recommendations": "Recommendations",
+  "editArticle": "Edit article with ID",
+  "createArticle": "Create new article",
+  "createArticleBtn": "Create article"
 }

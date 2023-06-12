@@ -46,5 +46,8 @@
   "allArticleType": "Все",
   "economicArticleType": "Экономика",
   "scienceArticleType": "Наука",
-  "recommendations": "Рекомендации"
+  "recommendations": "Рекомендации",
+  "editArticle": "Редактирование статьи с ID",
+  "createArticle": "Создание новой статьи",
+  "createArticleBtn": "Создать статью"
 }

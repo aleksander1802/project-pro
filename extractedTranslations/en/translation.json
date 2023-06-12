@@ -1,5 +1,6 @@
 {
   "": "",
+  "App": "App",
   "ITArticleType": "",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     " Deserunt voluptatem eius, at ad, voluptatibus doloremque uam explicabo, ab ullam  repellendus perspiciatis veniam?": " Deserunt voluptatem eius, at ad, voluptatibus doloremque uam explicabo, ab ullam  repellendus perspiciatis veniam?",
@@ -17,10 +18,14 @@
   "cancel": "cancel",
   "comment": "comment",
   "commentsOut": "commentsOut",
+  "createArticle": "createArticle",
+  "createArticleBTN": "createArticleBTN",
+  "createArticleBtn": "createArticleBtn",
   "decrement": "decrement",
   "descending": "descending",
   "economicArticleType": "",
   "edit": "edit",
+  "editArticle": "editArticle",
   "enter": "Войти",
   "enterTextComment": "enterTextComment",
   "error": "error",
