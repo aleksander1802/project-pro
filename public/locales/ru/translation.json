@@ -49,5 +49,6 @@
   "recommendations": "Рекомендации",
   "editArticle": "Редактирование статьи с ID",
   "createArticle": "Создание новой статьи",
-  "createArticleBtn": "Создать статью"
+  "createArticleBtn": "Создать статью",
+  "errorArticle": "Произошла ошибка при загрузке статей"
 }

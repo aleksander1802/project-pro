@@ -49,5 +49,6 @@
   "recommendations": "Recommendations",
   "editArticle": "Edit article with ID",
   "createArticle": "Create new article",
-  "createArticleBtn": "Create article"
+  "createArticleBtn": "Create article",
+  "errorArticle": "An error occurred while uploading articles"
 }

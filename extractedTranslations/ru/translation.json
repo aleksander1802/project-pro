@@ -29,6 +29,7 @@
   "enter": "Войти",
   "enterTextComment": "enterTextComment",
   "error": "error",
+  "errorArticle": "errorArticle",
   "errorData": "errorData",
   "errorLogin": "errorLogin",
   "errorServer": "errorServer",
@@ -95,6 +96,7 @@
     "": ""
   },
   "Профиль": "Профиль",
+  "Профиль не найден": "Профиль не найден",
   "Редактировать": "Редактировать",
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
   "Сохранить": "Сохранить",
