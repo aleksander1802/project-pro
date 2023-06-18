@@ -9,7 +9,7 @@ const data = {
   age: 29,
   country: Country.Russia,
   lastname: 'Reiss',
-  first: 'Darrell',
+  firstname: 'Darrell',
   city: 'Donetsk',
   currency: Currency.RUB,
   id: '1',
@@ -43,7 +43,7 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
+    expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR]);
   });
 
   test('validate error', async () => {
@@ -55,6 +55,6 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR]);
+    expect(result.payload).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
   });
 });
