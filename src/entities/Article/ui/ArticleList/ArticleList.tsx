@@ -4,10 +4,11 @@ import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, ListRowProps, WindowScroller } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/Page';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Article, ArticleView } from '../../model/types/article';
-import cls from './ArticleList.module.scss';
 import ArticleListItem from '../ArticleListItem/ArticleListItem';
 import ArticleListItemSkeleton from '../ArticleListItem/ArticleListItemSkeleton';
+import { Article } from 'entities/Article/model/types/article';
+import { ArticleView } from 'entities/Article/model/consts/articleConsts';
+import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
   className?: string;
@@ -82,7 +83,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         scrollTop,
       }) => (
         <div
-        // @ts-ignore
+          // @ts-ignore
           ref={registerChild}
           className={classNames(cls.ArticleList, {}, [className, cls[view]])}
         >
