@@ -13,7 +13,7 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { HStack } from 'shared/ui/Stack';
 import { Icon } from 'shared/ui/Icon/Icon';
@@ -70,11 +70,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             items={[
               ...(isAdminPanelAvailable
                 ? [
-                  {
-                    content: t('Админка'),
-                    href: RoutePath.admin_panel,
-                  },
-                ]
+                    {
+                      content: t('Админка'),
+                      href: RoutePath.admin_panel,
+                    },
+                  ]
                 : []),
               {
                 content: t('Профиль'),
