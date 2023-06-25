@@ -1,7 +1,7 @@
 {
   "React Functional Component": {
     "prefix": "stories",
-    "body": [      
+    "body": [
       "import { ComponentStory, ComponentMeta } from '@storybook/react';",
       "import { $TM_FILENAME_BASE } from './$TM_FILENAME_BASE';",
       "",
