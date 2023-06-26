@@ -13,11 +13,9 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { HStack } from 'shared/ui/Stack';
-import { Icon } from 'shared/ui/Icon/Icon';
-import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
+import { NotificationButton } from 'features/notificationButton';
+import { AvatarDropdown } from 'features/avatarDropdown';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -28,9 +26,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
-  const dispatch = useDispatch();
-  const isAdmin = useSelector(isUserAdmin);
-  const isManager = useSelector(isUserManager);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -39,12 +34,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const onShowModal = useCallback(() => {
     setIsAuthModal(true);
   }, []);
-
-  const onLogout = useCallback(() => {
-    dispatch(userActions.logout());
-  }, [dispatch]);
-
-  const isAdminPanelAvailable = isAdmin || isManager;
 
   if (authData) {
     return (
@@ -62,31 +51,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           {t('createArticleBtn')}
         </AppLink>
         <HStack gap="16" className={cls.actions}>
-          <Button theme={ButtonTheme.CLEAR}>
-            <Icon Svg={NotificationIcon} inverted />
-          </Button>
-          <Dropdown
-            direction="bottom left"
-            items={[
-              ...(isAdminPanelAvailable
-                ? [
-                  {
-                    content: t('Админка'),
-                    href: RoutePath.admin_panel,
-                  },
-                ]
-                : []),
-              {
-                content: t('Профиль'),
-                href: RoutePath.profile + authData.id,
-              },
-              {
-                content: t('Выйти'),
-                onClick: onLogout,
-              },
-            ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
-          />
+          <NotificationButton />
+          <AvatarDropdown />
         </HStack>
       </header>
     );
