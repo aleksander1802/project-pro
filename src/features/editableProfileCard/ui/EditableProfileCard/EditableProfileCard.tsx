@@ -1,18 +1,18 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import {
   DynamicModuleLoader,
   ReducersList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { VStack } from 'shared/ui/Stack';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { ProfileCard } from 'entities/Profile';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { ProfileCard } from '@/entities/Profile';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
@@ -22,7 +22,7 @@ import { EditableProfileCardHeader } from '../EditableProfileCardHeader/Editable
 
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import { ValidateProfileError } from 'features/editableProfileCard/model/consts/consts';
+import { ValidateProfileError } from '@/features/editableProfileCard/model/consts/consts';
 
 interface EditableProfileCardProps {
   className?: string;
