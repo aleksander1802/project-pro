@@ -1,7 +1,6 @@
-import { StateSchema } from '@/app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/storeProvider';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
 import { ValidateProfileError } from '../../consts/consts';
-
 
 describe('getProfileValidateErrors.test', () => {
   test('should work with filled state', () => {

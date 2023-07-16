@@ -1,5 +1,5 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Text } from '@/shared/ui/Text/Text';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
@@ -21,7 +21,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
   if (isLoading) {
     return (
       <VStack
-        gap={'8'}
+        gap="8"
         max
         className={classNames(cls.CommentCard, {}, [className, cls.loading])}
       >

@@ -1,12 +1,12 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useSelector } from 'react-redux';
 import { VStack } from '@/shared/ui/Stack';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { ProfileCard } from '@/entities/Profile';
@@ -128,7 +128,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
               key={err}
               theme={TextTheme.ERROR}
               text={validateErrorTranslates[err]}
-              data-testid={'EditableProfileCard.Error'}
+              data-testid="EditableProfileCard.Error"
             />
           ))}
         <ProfileCard
