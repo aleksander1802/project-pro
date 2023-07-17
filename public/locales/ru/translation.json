@@ -50,5 +50,9 @@
   "editArticle": "Редактирование статьи с ID",
   "createArticle": "Создание новой статьи",
   "createArticleBtn": "Создать статью",
-  "errorArticle": "Произошла ошибка при загрузке статей"
+  "errorArticle": "Произошла ошибка при загрузке статей",
+  "yourFeedback": "Ваш отзыв",
+  "articleFeedback": "Как вам статья?",
+  "articleFeedbackTitle": "Оставьте отзыв о статье",
+  "close": "Закрыть"
 }

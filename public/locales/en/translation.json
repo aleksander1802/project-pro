@@ -50,5 +50,9 @@
   "editArticle": "Edit article with ID",
   "createArticle": "Create new article",
   "createArticleBtn": "Create article",
-  "errorArticle": "An error occurred while uploading articles"
+  "errorArticle": "An error occurred while uploading articles",
+  "yourFeedback": "Your feedback",
+  "articleFeedback": "How do you like the article?",
+  "articleFeedbackTitle": "Leave feedback about the article",
+  "close": "Close"
 }
