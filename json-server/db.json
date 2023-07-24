@@ -1,29 +1,29 @@
 {
   "notifications": [
     {
-        "id": "1",
-        "title": "Уведомление 1",
-        "description": "Произошло какое-то событие",
-        "userId": "1"
+      "id": "1",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
     },
     {
-        "id": "2",
-        "title": "Уведомление 2",
-        "description": "Произошло какое-то событие 2",
-        "userId": "1",
-        "href": "http://localhost:3000/admin"
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие 2",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
     },
     {
-        "id": "3",
-        "title": "Уведомление 3",
-        "description": "Произошло какое-то событие",
-        "userId": "1"
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
     },
     {
-        "id": "4",
-        "title": "Уведомление 4",
-        "description": "Произошло какое-то событие",
-        "userId": "1"
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
     }
   ],
   "posts": [
@@ -1193,6 +1193,59 @@
       "username": "user",
       "country": "Russia",
       "currency": "RUB"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": "5",
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "4",
+      "feedback": "Норм статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "3",
+      "rate": "3",
+      "feedback": "Не очень статья",
+      "userId": "1",
+      "articleId": "3"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 3,
+      "feedback": "Пойдёт",
+      "id": "RXtfSVc"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": "5",
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "4",
+      "feedback": "Норм статья",
+      "userId": "1",
+      "profileId": "2"
+    },
+    {
+      "id": "3",
+      "rate": "2",
+      "feedback": "Не очень статья",
+      "userId": "1",
+      "profileId": "3"
     }
   ]
 }

@@ -54,5 +54,7 @@
   "yourFeedback": "Your feedback",
   "articleFeedback": "How do you like the article?",
   "articleFeedbackTitle": "Leave feedback about the article",
-  "close": "Close"
+  "close": "Close",
+  "rateArticle": "Rate article",
+  "tanksRate": "Thanks for the rating"
 }
