@@ -27,7 +27,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { ArticleBlock } from '@/entities/Article/model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 
 interface ArticleDetailsProps {
   className?: string;

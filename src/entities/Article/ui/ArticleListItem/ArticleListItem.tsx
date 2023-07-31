@@ -14,8 +14,8 @@ import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
-import { Article, ArticleTextBlock } from '@/entities/Article/model/types/article';
-import { ArticleBlockType, ArticleView } from '@/entities/Article/model/consts/articleConsts';
+import { Article, ArticleTextBlock } from '../../model/types/article';
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListItemProps {
   className?: string;

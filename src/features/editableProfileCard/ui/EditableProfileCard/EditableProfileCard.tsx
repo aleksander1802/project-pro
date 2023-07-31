@@ -22,7 +22,7 @@ import { EditableProfileCardHeader } from '../EditableProfileCardHeader/Editable
 
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import { ValidateProfileError } from '@/features/editableProfileCard/model/consts/consts';
+import { ValidateProfileError } from '../../model/consts/consts';
 
 interface EditableProfileCardProps {
   className?: string;
