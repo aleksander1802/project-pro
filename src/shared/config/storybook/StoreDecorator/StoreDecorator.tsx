@@ -1,3 +1,4 @@
+/* eslint-disable shadow-plugin/public-api-imports */
 import { Story } from '@storybook/react';
 import { StateSchema } from '@/app/providers/storeProvider';
 import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
