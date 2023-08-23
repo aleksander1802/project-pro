@@ -3,7 +3,7 @@ import {
   createEntityAdapter,
   createSlice,
 } from '@reduxjs/toolkit';
-import { StateSchema } from '@/app/providers/storeProvider';
+
 import {
   Article,
   ArticleSortField,
@@ -15,6 +15,7 @@ import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
@@ -39,7 +40,7 @@ const articlesPageSlice = createSlice({
     sort: ArticleSortField.CREATED,
     search: '',
     order: 'asc',
-    type: ArticleType.ALL
+    type: ArticleType.ALL,
   }),
   reducers: {
     setView: (state, action: PayloadAction<ArticleView>) => {
@@ -79,19 +80,16 @@ const articlesPageSlice = createSlice({
           articlesAdapter.removeAll(state);
         }
       })
-      .addCase(
-        fetchArticlesList.fulfilled,
-        (state, action) => {
-          state.isLoading = false;
+      .addCase(fetchArticlesList.fulfilled, (state, action) => {
+        state.isLoading = false;
 
-          state.hasMore = action.payload.length >= state.limit;
-          if (action.meta.arg.replace) {
-            articlesAdapter.setAll(state, action.payload);
-          } else {
-            articlesAdapter.addMany(state, action.payload);
-          }
-        },
-      )
+        state.hasMore = action.payload.length >= state.limit;
+        if (action.meta.arg.replace) {
+          articlesAdapter.setAll(state, action.payload);
+        } else {
+          articlesAdapter.addMany(state, action.payload);
+        }
+      })
       .addCase(fetchArticlesList.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;

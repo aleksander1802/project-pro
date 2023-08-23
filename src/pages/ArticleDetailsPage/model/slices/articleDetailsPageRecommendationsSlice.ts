@@ -1,27 +1,18 @@
-/* eslint-disable operator-linebreak */
-import {
-  createEntityAdapter,
-  createSlice,
-  PayloadAction,
-} from '@reduxjs/toolkit';
-
-import { StateSchema } from '@/app/providers/storeProvider';
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import { Article } from '@/entities/Article';
-import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-
 import { ArticleDetailsRecommendationsSchema } from '../types/ArticleDetailsRecommendationsSchema';
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 const recommendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
 });
 
-export const getArticleRecommendations =
-  recommendationsAdapter.getSelectors<StateSchema>(
-    (state) =>
-      state.articleDetailsPage?.recommendations ||
-      recommendationsAdapter.getInitialState(),
-  );
+export const getArticleRecommendations = recommendationsAdapter.getSelectors<StateSchema>(
+  (state) =>
+    state.articleDetailsPage?.recommendations
+      || recommendationsAdapter.getInitialState(),
+);
 
 const articleDetailsPageRecommendationsSlice = createSlice({
   name: 'articleDetailsPageRecommendations',
@@ -52,5 +43,4 @@ const articleDetailsPageRecommendationsSlice = createSlice({
   },
 });
 
-export const { reducer: articleDetailsPageRecommendationsReducer } =
-  articleDetailsPageRecommendationsSlice;
+export const { reducer: articleDetailsPageRecommendationsReducer } = articleDetailsPageRecommendationsSlice;

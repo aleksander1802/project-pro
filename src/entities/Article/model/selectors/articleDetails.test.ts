@@ -1,4 +1,4 @@
-import { StateSchema } from '@/app/providers/storeProvider/config/StateSchema';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import {
   getArticleDetailsData,
   getArticleDetailsError,
