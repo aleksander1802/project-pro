@@ -1154,7 +1154,7 @@
     },
     {
       "id": "2",
-      "username": "testuser",
+      "username": "user",
       "password": "123",
       "roles": [
         "USER"
@@ -1164,6 +1164,24 @@
     {
       "id": "3",
       "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://sun9-77.userapi.com/impg/6L5oWVFER7pd7sGKkGHzEBDbi1d2xev6oWRnqg/TAtQP_J_XqA.jpg?size=1250x1250&quality=96&sign=3fc006dc1860a8e85c77bb88f0414e08&c_uniq_tag=UdIDzb2N9zBPeNGOCauyo6C9WthdYqBRl6BqqSjrIzY&type=album"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://sun9-77.userapi.com/impg/6L5oWVFER7pd7sGKkGHzEBDbi1d2xev6oWRnqg/TAtQP_J_XqA.jpg?size=1250x1250&quality=96&sign=3fc006dc1860a8e85c77bb88f0414e08&c_uniq_tag=UdIDzb2N9zBPeNGOCauyo6C9WthdYqBRl6BqqSjrIzY&type=album"
+    },
+    {
+      "id": "5",
+      "username": "usertest",
       "password": "123",
       "roles": [
         "MANAGER"
@@ -1193,6 +1211,28 @@
       "username": "user",
       "country": "Russia",
       "currency": "RUB"
+    },
+    {
+      "id": "3",
+      "firstname": "Alex",
+      "lastname": "Rud",
+      "age": 29,
+      "city": "Donetsk",
+      "avatar": "https://sun9-77.userapi.com/impg/6L5oWVFER7pd7sGKkGHzEBDbi1d2xev6oWRnqg/TAtQP_J_XqA.jpg?size=1250x1250&quality=96&sign=3fc006dc1860a8e85c77bb88f0414e08&c_uniq_tag=UdIDzb2N9zBPeNGOCauyo6C9WthdYqBRl6BqqSjrIzY&type=album",
+      "username": "user",
+      "country": "Russia",
+      "currency": "RUB"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "testuser",
+      "avatar": "https://ru-static.z-dn.net/files/dc7/d90cf3cfd834a7e9b1267237113086f4.jpg"
     }
   ],
   "article-ratings": [

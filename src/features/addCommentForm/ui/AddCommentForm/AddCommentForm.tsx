@@ -15,10 +15,7 @@ import {
   addCommentFormActions,
   addCommentFormReducer,
 } from '../../model/slices/addCommentFormSlice';
-import {
-  getAddCommentFormError,
-  getAddCommentFormText,
-} from '../../model/selectors/addCommentFormSelectors';
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -34,7 +31,6 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
   const { className, onSendComment } = props;
   const { t } = useTranslation();
   const text = useSelector(getAddCommentFormText);
-  const error = useSelector(getAddCommentFormError);
   const dispatch = useAppDispatch();
 
   const onCommentTextChange = useCallback(
@@ -52,17 +48,23 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <HStack
+        data-testid="AddCommentForm"
         justify="between"
         max
         className={classNames(cls.AddCommentForm, {}, [className])}
       >
         <Input
+          data-testid="AddCommentForm.Input"
           className={cls.input}
           value={text}
           placeholder={t('enterTextComment')}
           onChange={onCommentTextChange}
         />
-        <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
+        <Button
+          data-testid="AddCommentForm.Button"
+          theme={ButtonTheme.OUTLINE}
+          onClick={onSendHandler}
+        >
           {t('submit')}
         </Button>
       </HStack>
