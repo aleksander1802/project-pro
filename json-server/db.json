@@ -1154,7 +1154,7 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "testuser",
       "password": "123",
       "roles": [
         "USER"
