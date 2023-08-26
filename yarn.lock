@@ -7568,10 +7568,10 @@ eslint-plugin-react@^7.28.0, eslint-plugin-react@^7.29.2, eslint-plugin-react@^7
     semver "^6.3.1"
     string.prototype.matchall "^4.0.8"
 
-eslint-plugin-shadow-plugin@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.npmjs.org/eslint-plugin-shadow-plugin/-/eslint-plugin-shadow-plugin-0.0.8.tgz"
-  integrity sha512-+C9wkr0ohJ97j6rzqY1n37PC056LZWrglTiRJApW8l+OoNfvO8U+Tw/ZNMOCrFiTsH9JPHBd74R4wrbIZ6Msrw==
+eslint-plugin-shadow-plugin@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.npmjs.org/eslint-plugin-shadow-plugin/-/eslint-plugin-shadow-plugin-0.0.10.tgz"
+  integrity sha512-fZuGZbyw4ZLizfprqGsuqwmuxjNwChOFGvlZTFDx3482D0vcpIakfMzC0oQxzCLrOuj66/pyxjK+e7S+sO6jHA==
   dependencies:
     requireindex "^1.2.0"
 

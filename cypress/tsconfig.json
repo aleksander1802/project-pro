@@ -7,5 +7,5 @@
     "isolatedModules": false
   },
   "extends": "../tsconfig.json",
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "../node_modules/cypress-audit"]
 }
