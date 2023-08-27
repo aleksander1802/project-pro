@@ -1,1 +1,8 @@
+# Ignore artifacts:
+build
+coverage
 /scripts
+*.html
+*.css
+*.scss
+node_modules
