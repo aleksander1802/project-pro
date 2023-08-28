@@ -42,7 +42,6 @@ module.exports = {
 
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-
     'i18next/no-literal-string': [
       'error',
       {
@@ -63,6 +62,7 @@ module.exports = {
       },
     ],
     'max-len': ['error', { ignoreComments: true, code: 240 }],
+    'react/no-unstable-nested-components': 'warn',
     'comma-dangle': 'off',
     'react/button-has-type': 'off',
     'react/prop-types': 'off',
