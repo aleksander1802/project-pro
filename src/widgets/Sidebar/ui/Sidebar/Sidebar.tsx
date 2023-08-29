@@ -1,15 +1,15 @@
 import { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
-import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { AppLogo } from '@/shared/ui/AppLogo';
+import { AppLogo } from '@/shared/ui/deprecated/AppLogo';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import { LangSwitcher } from '@/shared/ui/deprecated/LangSwitcher';
 
 interface SidebarProps {
   className?: string;
@@ -36,9 +36,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
       on={(
         <aside
           data-testid="sidebar"
-          className={classNames(cls.SidebarRedesigned, { [cls.collapsed]: collapsed }, [
-            className,
-          ])}
+          className={classNames(
+            cls.SidebarRedesigned,
+            { [cls.collapsed]: collapsed },
+            [className],
+          )}
         >
           <AppLogo className={cls.appLogo} />
         </aside>
@@ -46,11 +48,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
       off={(
         <aside
           data-testid="sidebar"
-          className={classNames(
-            cls.Sidebar,
-            { [cls.collapsed]: collapsed },
-            [className],
-          )}
+          className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+            className,
+          ])}
         >
           <Button
             data-testid="sidebar-toggle"
