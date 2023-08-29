@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { UserSchema, User } from '../types/user';
-import { setFeatureFlag } from '@/shared/lib/features';
+import { setFeatureFlags } from '@/shared/lib/features';
 import { saveJsonSettings } from '../services/saveJsonSettings';
 import { JsonSettings } from '../types/jsonSettings';
 import { initAuthData } from '../services/initAuthData';
@@ -16,7 +16,8 @@ export const userSlice = createSlice({
   reducers: {
     setAuthData: (state, action: PayloadAction<User>) => {
       state.authData = action.payload;
-      setFeatureFlag(action.payload.features);
+      setFeatureFlags(action.payload.features);
+      localStorage.setItem(USER_LOCALSTORAGE_KEY, action.payload.id);
     },
     logout: (state) => {
       state.authData = undefined;
@@ -35,11 +36,9 @@ export const userSlice = createSlice({
     builder.addCase(
       initAuthData.fulfilled,
       (state, { payload }: PayloadAction<User>) => {
-        if (state.authData) {
-          state.authData = payload;
-          setFeatureFlag(payload.features);
-          state._inited = true;
-        }
+        state.authData = payload;
+        setFeatureFlags(payload.features);
+        state._inited = true;
       },
     );
     builder.addCase(initAuthData.rejected, (state) => {
@@ -48,5 +47,6 @@ export const userSlice = createSlice({
   },
 });
 
+// Action creators are generated for each case reducer function
 export const { actions: userActions } = userSlice;
 export const { reducer: userReducer } = userSlice;
