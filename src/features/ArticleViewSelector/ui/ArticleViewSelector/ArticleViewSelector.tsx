@@ -37,6 +37,8 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         <React.Fragment key={v.view}>
           <Button theme={ButtonTheme.CLEAR} onClick={onClick(v.view)}>
             <Icon
+              width={24}
+              height={24}
               Svg={v.icon}
               className={classNames('', { [cls.selected]: v.view !== view })}
             />
