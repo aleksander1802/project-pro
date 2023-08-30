@@ -39,5 +39,3 @@ export const Card = memo((props: CardProps) => {
     </div>
   );
 });
-
-export default Card;

@@ -7,10 +7,6 @@ export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 const justifyClasses: Record<FlexJustify, string> = {
   start: cls.justifyStart,
   center: cls.justifyCenter,
@@ -18,29 +14,17 @@ const justifyClasses: Record<FlexJustify, string> = {
   between: cls.justifyBetween,
 };
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 const alignClasses: Record<FlexAlign, string> = {
   start: cls.alignStart,
   center: cls.alignCenter,
   end: cls.alignEnd,
 };
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 const directionClasses: Record<FlexDirection, string> = {
   row: cls.directionRow,
   column: cls.directionColumn,
 };
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 const gapClasses: Record<FlexGap, string> = {
   4: cls.gap4,
   8: cls.gap8,
@@ -63,10 +47,6 @@ export interface FlexProps extends DivProps {
   max?: boolean;
 }
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 export const Flex = memo((props: FlexProps) => {
   const {
     className,

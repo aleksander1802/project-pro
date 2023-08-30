@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/deprecated/Text/Text';
 import { Icon } from '@/shared/ui/redesigned/Icon/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import Card from '@/shared/ui/deprecated/Card/Card';
+import { Card } from '@/shared/ui/deprecated/Card/Card';
 import { Avatar } from '@/shared/ui/deprecated/Avatar/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button/Button';
 import { AppLink } from '@/shared/ui/redesigned/AppLink/AppLink';
@@ -16,7 +16,7 @@ import {
   ArticleView,
 } from '../../model/consts/articleConsts';
 import { getRouteArticlesDetails } from '@/shared/const/router';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 interface ArticleListItemProps {
