@@ -8,30 +8,14 @@ export type ButtonSize = 'm' | 'l' | 'xl';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  /**
-   * Тема кнопки. Отвечает за визуал (в рамке, без стилей, противоположный теме приложения цвет и тд)
-   */
   variant?: ButtonVariant;
-  /**
-   * Флаг, делающий кнопку квадратной
-   */
   square?: boolean;
-  /**
-   * Размер кнопки в соответствии с дизайн системой
-   */
   size?: ButtonSize;
-  /**
-   * Флаг, отвечающий за работу кнопки
-   */
   disabled?: boolean;
-  /**
-   * Содержимое кнопки
-   */
   children?: ReactNode;
-  /**
-   * Увеличивает кнопку на всю свободную ширину
-   */
   fullWidth?: boolean;
+  addonLeft?: ReactNode;
+  addonRight?: ReactNode;
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -43,6 +27,8 @@ export const Button = memo((props: ButtonProps) => {
     disabled,
     fullWidth,
     size = 'm',
+    addonLeft,
+    addonRight,
     ...otherProps
   } = props;
 
@@ -50,6 +36,7 @@ export const Button = memo((props: ButtonProps) => {
     [cls.square]: square,
     [cls.disabled]: disabled,
     [cls.fullWidth]: fullWidth,
+    [cls.widthAddon]: Boolean(addonLeft) || Boolean(addonRight),
   };
 
   return (
@@ -63,7 +50,9 @@ export const Button = memo((props: ButtonProps) => {
       disabled={disabled}
       {...otherProps}
     >
+      <div className={cls.addonLeft}>{addonLeft}</div>
       {children}
+      <div className={cls.addonRight}>{addonRight}</div>
     </button>
   );
 });
