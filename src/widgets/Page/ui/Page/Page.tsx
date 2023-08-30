@@ -10,7 +10,6 @@ import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { TestProps } from '@/shared/types/tests';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface PageProps extends TestProps {
   className?: string;
@@ -52,11 +51,7 @@ export const Page = memo((props: PageProps) => {
     <main
       ref={wrapperRef}
       className={classNames(
-        toggleFeatures({
-          name: 'isAppRedesigned',
-          on: () => cls.PageRedesigned,
-          off: () => cls.Page,
-        }),
+        cls.PageRedesigned,
         {},
         [className],
       )}
