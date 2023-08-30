@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import ListIcon from '@/shared/assets/icons/list-24-24.svg';
 import TileIcon from '@/shared/assets/icons/tile-24-24.svg';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button/Button';
-import { Icon } from '@/shared/ui/deprecated/Icon/Icon';
+import { Icon } from '@/shared/ui/redesigned/Icon/Icon';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '@/entities/Article';
 

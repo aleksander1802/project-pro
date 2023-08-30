@@ -3,7 +3,7 @@ import { Fragment, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../../../AppLink/AppLink';
+import { AppLink } from '../../../../redesigned/AppLink/AppLink';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
 
@@ -61,7 +61,11 @@ export function Dropdown(props: DropdownProps) {
           }
 
           return (
-            <Menu.Item as={Fragment} disabled={item.disabled} key={`dropdown-key-${index}`}>
+            <Menu.Item
+              as={Fragment}
+              disabled={item.disabled}
+              key={`dropdown-key-${index}`}
+            >
               {content}
             </Menu.Item>
           );

@@ -7,7 +7,11 @@ import { Text } from '@/shared/ui/deprecated/Text/Text';
 import { StarRating } from '@/shared/ui/deprecated/StarRating/StarRating';
 import { Modal } from '@/shared/ui/deprecated/Modal/Modal';
 import { Input } from '@/shared/ui/deprecated/Input/Input';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button/Button';
+import {
+  Button,
+  ButtonSize,
+  ButtonTheme,
+} from '@/shared/ui/deprecated/Button/Button';
 import { Drawer } from '@/shared/ui/deprecated/Drawer/Drawer';
 
 interface RatingCardProps {

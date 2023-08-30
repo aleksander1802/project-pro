@@ -12,7 +12,7 @@ import { Skeleton } from '@/shared/ui/deprecated/Skeleton/Skeleton';
 import { Avatar } from '@/shared/ui/deprecated/Avatar/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
-import { Icon } from '@/shared/ui/deprecated/Icon/Icon';
+import { Icon } from '@/shared/ui/redesigned/Icon/Icon';
 
 import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
@@ -48,32 +48,32 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
-    case ArticleBlockType.CODE:
-      return (
-        <ArticleCodeBlockComponent
-          key={block.id}
-          block={block}
-          className={cls.block}
-        />
-      );
-    case ArticleBlockType.IMAGE:
-      return (
-        <ArticleImageBlockComponent
-          key={block.id}
-          block={block}
-          className={cls.block}
-        />
-      );
-    case ArticleBlockType.TEXT:
-      return (
-        <ArticleTextBlockComponent
-          key={block.id}
-          className={cls.block}
-          block={block}
-        />
-      );
-    default:
-      return null;
+      case ArticleBlockType.CODE:
+        return (
+          <ArticleCodeBlockComponent
+            key={block.id}
+            block={block}
+            className={cls.block}
+          />
+        );
+      case ArticleBlockType.IMAGE:
+        return (
+          <ArticleImageBlockComponent
+            key={block.id}
+            block={block}
+            className={cls.block}
+          />
+        );
+      case ArticleBlockType.TEXT:
+        return (
+          <ArticleTextBlockComponent
+            key={block.id}
+            className={cls.block}
+            block={block}
+          />
+        );
+      default:
+        return null;
     }
   }, []);
 

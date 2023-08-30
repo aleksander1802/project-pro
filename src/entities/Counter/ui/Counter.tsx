@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/shared/ui/deprecated/Button/Button';
+import { Button } from '@/shared/ui/redesigned/Button/Button';
 import { counterActions } from '../model/slice/counterSlice';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 
