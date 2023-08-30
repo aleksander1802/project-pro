@@ -1,21 +1,19 @@
 import {
-  PayloadAction,
   createEntityAdapter,
   createSlice,
+  PayloadAction,
 } from '@reduxjs/toolkit';
-
+import { StateSchema } from '@/app/providers/StoreProvider';
 import {
   Article,
-  ArticleSortField,
   ArticleType,
   ArticleView,
+  ArticleSortField,
 } from '@/entities/Article';
-
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sort';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
-import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
-import { StateSchema } from '@/app/providers/StoreProvider';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 
 const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
@@ -32,7 +30,7 @@ const articlesPageSlice = createSlice({
     error: undefined,
     ids: [],
     entities: {},
-    view: ArticleView.TILE,
+    view: ArticleView.SMALL,
     page: 1,
     hasMore: true,
     _inited: false,
@@ -67,7 +65,7 @@ const articlesPageSlice = createSlice({
         ARTICLES_VIEW_LOCALSTORAGE_KEY,
       ) as ArticleView;
       state.view = view;
-      state.limit = view === ArticleView.LIST ? 4 : 9;
+      state.limit = view === ArticleView.BIG ? 4 : 9;
       state._inited = true;
     },
   },
@@ -76,14 +74,15 @@ const articlesPageSlice = createSlice({
       .addCase(fetchArticlesList.pending, (state, action) => {
         state.error = undefined;
         state.isLoading = true;
+
         if (action.meta.arg.replace) {
           articlesAdapter.removeAll(state);
         }
       })
       .addCase(fetchArticlesList.fulfilled, (state, action) => {
         state.isLoading = false;
-
         state.hasMore = action.payload.length >= state.limit;
+
         if (action.meta.arg.replace) {
           articlesAdapter.setAll(state, action.payload);
         } else {

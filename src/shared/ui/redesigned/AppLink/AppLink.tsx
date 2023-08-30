@@ -6,10 +6,10 @@ import cls from './AppLink.module.scss';
 export type AppLinkVariant = 'primary' | 'red';
 
 interface AppLinkProps extends LinkProps {
-  className?: string;
-  variant?: AppLinkVariant;
-  children?: ReactNode;
-  activeClassName?: string;
+    className?: string;
+    variant?: AppLinkVariant;
+    children?: ReactNode;
+    activeClassName?: string;
 }
 
 export const AppLink = memo((props: AppLinkProps) => {

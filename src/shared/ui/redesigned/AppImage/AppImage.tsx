@@ -1,7 +1,7 @@
 import {
   ImgHTMLAttributes,
-  ReactElement,
   memo,
+  ReactElement,
   useLayoutEffect,
   useState,
 } from 'react';
@@ -17,8 +17,8 @@ export const AppImage = memo((props: AppImageProps) => {
     className,
     src,
     alt = 'image',
-    fallback,
     errorFallback,
+    fallback,
     ...otherProps
   } = props;
   const [isLoading, setIsLoading] = useState(true);
@@ -30,9 +30,9 @@ export const AppImage = memo((props: AppImageProps) => {
     img.onload = () => {
       setIsLoading(false);
     };
-
     img.onerror = () => {
       setIsLoading(false);
+      setHasError(true);
     };
   }, [src]);
 
@@ -46,5 +46,3 @@ export const AppImage = memo((props: AppImageProps) => {
 
   return <img className={className} src={src} alt={alt} {...otherProps} />;
 });
-
-export default AppImage;

@@ -95,14 +95,14 @@ export const LoadingList = Template.bind({});
 LoadingList.args = {
   isLoading: true,
   articles: [],
-  view: ArticleView.LIST,
+  view: ArticleView.BIG,
 };
 
 export const LoadingTile = Template.bind({});
 LoadingTile.args = {
   isLoading: true,
   articles: [],
-  view: ArticleView.TILE,
+  view: ArticleView.SMALL,
 };
 
 export const List = Template.bind({});
@@ -113,7 +113,7 @@ List.args = {
     id: `${idx}`,
   })),
 
-  view: ArticleView.LIST,
+  view: ArticleView.BIG,
 };
 
 export const Tile = Template.bind({});
@@ -124,5 +124,5 @@ Tile.args = {
     id: `${idx}`,
   })),
 
-  view: ArticleView.TILE,
+  view: ArticleView.SMALL,
 };

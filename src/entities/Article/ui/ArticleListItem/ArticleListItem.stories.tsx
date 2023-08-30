@@ -93,12 +93,12 @@ const article = {
 
 export const List = Template.bind({});
 List.args = {
-  view: ArticleView.LIST,
+  view: ArticleView.BIG,
   article,
 };
 
 export const Tile = Template.bind({});
 Tile.args = {
-  view: ArticleView.TILE,
+  view: ArticleView.SMALL,
   article,
 };

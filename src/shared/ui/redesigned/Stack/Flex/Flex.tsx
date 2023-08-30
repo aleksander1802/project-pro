@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode, memo } from 'react';
-import { Mods, classNames } from '@/shared/lib/classNames/classNames';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
@@ -47,14 +47,14 @@ export interface FlexProps extends DivProps {
   max?: boolean;
 }
 
-export const Flex = memo((props: FlexProps) => {
+export const Flex = (props: FlexProps) => {
   const {
     className,
     children,
     justify = 'start',
     align = 'center',
     direction = 'row',
-    gap = '4',
+    gap,
     max,
     ...otherProps
   } = props;
@@ -76,6 +76,4 @@ export const Flex = memo((props: FlexProps) => {
       {children}
     </div>
   );
-});
-
-export default Flex;
+};

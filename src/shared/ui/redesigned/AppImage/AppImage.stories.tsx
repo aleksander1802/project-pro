@@ -1,8 +1,10 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { AppImage } from './AppImage';
 
 export default {
-  title: 'widget/AppImage',
+  title: 'shared/AppImage',
   component: AppImage,
   argTypes: {
     backgroundColor: { control: 'color' },

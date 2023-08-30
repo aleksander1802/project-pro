@@ -17,7 +17,7 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ArticleView) =>
-  new Array(view === ArticleView.TILE ? 9 : 3)
+  new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
     .map((item, idx) => (
       <ArticleListItemSkeleton className={cls.card} key={idx} view={view} />
@@ -28,7 +28,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     className,
     articles,
     isLoading,
-    view = ArticleView.TILE,
+    view = ArticleView.SMALL,
     target,
   } = props;
   const { t } = useTranslation();
