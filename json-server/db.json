@@ -1176,9 +1176,10 @@
         "isAppRedesigned": false
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": false,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://sun9-77.userapi.com/impg/6L5oWVFER7pd7sGKkGHzEBDbi1d2xev6oWRnqg/TAtQP_J_XqA.jpg?size=1250x1250&quality=96&sign=3fc006dc1860a8e85c77bb88f0414e08&c_uniq_tag=UdIDzb2N9zBPeNGOCauyo6C9WthdYqBRl6BqqSjrIzY&type=album"
     },

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {
   InputHTMLAttributes,
   memo,
@@ -9,16 +10,16 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  'value' | 'onChange' | 'readOnly'
+    InputHTMLAttributes<HTMLInputElement>,
+    'value' | 'onChange' | 'readOnly'
 >;
 
 interface InputProps extends HTMLInputProps {
-  className?: string;
-  value?: string | number;
-  onChange?: (value: string) => void;
-  autofocus?: boolean;
-  readonly?: boolean;
+    className?: string;
+    value?: string | number;
+    onChange?: (value: string) => void;
+    autofocus?: boolean;
+    readonly?: boolean;
 }
 
 /**
@@ -62,7 +63,6 @@ export const Input = memo((props: InputProps) => {
     setIsFocused(true);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSelect = (e: any) => {
     setCaretPosition(e?.target?.selectionStart || 0);
   };
