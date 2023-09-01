@@ -1,10 +1,12 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 
 export default {
-  title: 'pages/ArticleDetailsPage',
+  title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
   component: ArticleDetailsPage,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -25,7 +27,7 @@ const article: Article = {
   type: [ArticleType.IT],
   user: {
     id: '1',
-    username: 'aleksander1802',
+    username: 'Ulbi tv',
   },
   blocks: [
     {
