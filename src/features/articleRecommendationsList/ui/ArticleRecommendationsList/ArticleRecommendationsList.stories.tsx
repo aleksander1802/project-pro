@@ -1,7 +1,9 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ArticleRecommendationsList } from './ArticleRecommendationsList';
+
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from '@/entities/Article';
+import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 export default {
   title: 'features/ArticleRecommendationsList',
@@ -20,11 +22,11 @@ const article: Article = {
   img: '',
   createdAt: '',
   views: 123,
-  user: { id: '1', username: 'aleksander1802' },
+  user: { id: '1', username: '123' },
   blocks: [],
   type: [],
   title: '123',
-  subtitle: '1',
+  subtitle: 'asfsa',
 };
 
 export const Normal = Template.bind({});

@@ -7,7 +7,7 @@ import {
   useRateArticle,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 export interface ArticleRatingProps {
   className?: string;
@@ -18,14 +18,12 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
   const { className, articleId } = props;
   const { t } = useTranslation();
   const userData = useSelector(getUserAuthData);
+
   const { data, isLoading } = useGetArticleRating({
     articleId,
     userId: userData?.id ?? '',
   });
-
   const [rateArticleMutation] = useRateArticle();
-
-  const rating = data?.[0];
 
   const handleRateArticle = useCallback(
     (starsCount: number, feedback?: string) => {
@@ -37,6 +35,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
           feedback,
         });
       } catch (e) {
+        // handle error
         console.log(e);
       }
     },
@@ -61,14 +60,18 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     return <Skeleton width="100%" height={120} />;
   }
 
+  const rating = data?.[0];
+
   return (
     <RatingCard
       onCancel={onCancel}
       onAccept={onAccept}
       rate={rating?.rate}
       className={className}
-      title={t('rateArticle')}
-      feedbackTitle={t('yourFeedback')}
+      title={t('Оцените статью')}
+      feedbackTitle={t(
+        'Оставьте свой отзыв о статье, это поможет улучшить качество',
+      )}
       hasFeedback
     />
   );
