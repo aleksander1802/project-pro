@@ -12,7 +12,7 @@ import { SettingsPage } from '@/pages/SettingsPage';
 import {
   AppRoutes,
   getRouteAbout,
-  getRouteAdminForbidden,
+  getRouteForbidden,
   getRouteAdminPanel,
   getRouteArticles,
   getRouteArticlesCreate,
@@ -69,7 +69,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     roles: [UserRole.MANAGER, UserRole.ADMIN],
   },
   [AppRoutes.FORBIDDEN]: {
-    path: getRouteAdminForbidden(),
+    path: getRouteForbidden(),
     element: <ForbiddenPage />,
   },
   [AppRoutes.NOT_FOUND]: {

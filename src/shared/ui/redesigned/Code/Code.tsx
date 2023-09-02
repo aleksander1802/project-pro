@@ -8,8 +8,8 @@ import { ToggleFeatures } from '@/shared/lib/features';
 import { Icon } from '../Icon';
 
 interface CodeProps {
-    className?: string;
-    text: string;
+  className?: string;
+  text: string;
 }
 
 export const Code = memo((props: CodeProps) => {
@@ -23,14 +23,13 @@ export const Code = memo((props: CodeProps) => {
     <ToggleFeatures
       feature="isAppRedesigned"
       on={(
-        <pre
-          className={classNames(cls.CodeRedesigned, {}, [className])}
-        >
+        <pre className={classNames(cls.CodeRedesigned, {}, [className])}>
           <Icon
             clickable
             onClick={onCopy}
             className={cls.copyBtn}
             Svg={CopyIconNew}
+
           />
           <code>{text}</code>
         </pre>
