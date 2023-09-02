@@ -26,7 +26,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
 
   const userInfo = (
     <>
-      <Avatar size={32} src={article.user.avatar} />
+      <Avatar size={32} src={article.user.avatar} className={cls.avatar} />
       <Text bold text={article.user.username} />
     </>
   );
@@ -47,10 +47,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
         padding="24"
         max
         data-testid="ArticleListItem"
-        className={classNames(cls.ArticleListItem, {}, [
-          className,
-          cls[view],
-        ])}
+        className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
       >
         <VStack max gap="16">
           <HStack gap="8" max>
@@ -72,13 +69,8 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             />
           )}
           <HStack max justify="between">
-            <AppLink
-              target={target}
-              to={getRouteArticlesDetails(article.id)}
-            >
-              <Button variant="outline">
-                {t('Читать далее...')}
-              </Button>
+            <AppLink target={target} to={getRouteArticlesDetails(article.id)}>
+              <Button variant="outline">{t('Читать далее...')}</Button>
             </AppLink>
             {views}
           </HStack>
@@ -92,14 +84,11 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
       data-testid="ArticleListItem"
       target={target}
       to={getRouteArticlesDetails(article.id)}
-      className={classNames(cls.ArticleListItem, {}, [
-        className,
-        cls[view],
-      ])}
+      className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      <Card className={cls.card} border="round">
+      <Card className={cls.card} border="round" padding="0">
         <AppImage
-          fallback={<Skeleton width={200} height={200} />}
+          fallback={<Skeleton width="100%" height={200} />}
           alt={article.title}
           src={article.img}
           className={cls.img}
@@ -108,10 +97,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
           <Text title={article.title} className={cls.title} />
           <VStack gap="4" className={cls.footer} max>
             <HStack justify="between" max>
-              <Text
-                text={article.createdAt}
-                className={cls.date}
-              />
+              <Text text={article.createdAt} className={cls.date} />
               {views}
             </HStack>
             <HStack gap="4">{userInfo}</HStack>

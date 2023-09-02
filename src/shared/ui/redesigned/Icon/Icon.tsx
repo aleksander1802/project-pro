@@ -39,7 +39,7 @@ export const Icon = memo((props: IconProps) => {
       onClick={undefined}
     />
   );
-
+    // TODO исправить двойную кнопку
   if (clickable) {
     return (
       <button
