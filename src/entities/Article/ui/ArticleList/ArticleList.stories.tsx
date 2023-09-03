@@ -28,7 +28,7 @@ const article = {
     id: '1',
     username: 'shadow26627',
     avatar:
-      'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
+      'https://ru-static.z-dn.net/files/dc7/d90cf3cfd834a7e9b1267237113086f4.jpg',
   },
   type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
   blocks: [

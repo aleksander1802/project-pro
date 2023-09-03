@@ -64,8 +64,8 @@ export const CommentCard = memo((props: CommentCardProps) => {
           >
             <AppLink to={getRouteProfile(comment.user.id)}>
               <HStack gap="8">
-                {comment.user.avatar ? (
-                  <Avatar size={30} src={comment.user.avatar} />
+                {comment.user?.avatar ? (
+                  <Avatar size={30} src={comment.user?.avatar} />
                 ) : null}
                 <Text text={comment.user.username} bold />
               </HStack>
@@ -85,8 +85,8 @@ export const CommentCard = memo((props: CommentCardProps) => {
             to={getRouteProfile(comment.user.id)}
             className={cls.header}
           >
-            {comment.user.avatar ? (
-              <AvatarDeprecated size={30} src={comment.user.avatar} />
+            {comment.user?.avatar ? (
+              <AvatarDeprecated size={30} src={comment.user?.avatar} />
             ) : null}
             <TextDeprecated
               className={cls.username}
