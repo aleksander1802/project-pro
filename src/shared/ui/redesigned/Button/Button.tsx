@@ -46,7 +46,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef(
-  (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+  (props: ButtonProps, reference: ForwardedRef<HTMLButtonElement>) => {
     const {
       className,
       children,
@@ -79,7 +79,7 @@ export const Button = forwardRef(
         ])}
         disabled={disabled}
         {...otherProps}
-        ref={ref}
+        ref={reference}
       >
         <div className={cls.addonLeft}>{addonLeft}</div>
         {children}

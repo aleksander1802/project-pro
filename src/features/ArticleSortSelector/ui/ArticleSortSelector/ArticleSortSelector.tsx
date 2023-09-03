@@ -66,7 +66,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
           )}
         >
           <VStack gap="8">
-            <Text text={t('Сортировать по:')} />
+            <Text text={t('Сортировать по')} />
             <ListBox
               items={sortFieldOptions}
               value={sort}
@@ -88,7 +88,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
         >
           <Select<ArticleSortField>
             options={sortFieldOptions}
-            label={t('Сортировать ПО')}
+            label={t('Сортировать по')}
             value={sort}
             onChange={onChangeSort}
           />
