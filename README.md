@@ -216,3 +216,9 @@ Clear.args = {
 - [profileRating](/src/features/profileRating)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [UI](/src/features/UI)
+
+
+  ### [Deploy](https://spectacular-lily-915483.netlify.app/)
+
+
+
