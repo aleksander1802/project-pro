@@ -223,5 +223,12 @@ Clear.args = {
 
   ### [Deploy](https://spectacular-lily-915483.netlify.app/)
 
+## Signin
 
+ - login: admin
+ - password: 123
+
+## Change design:
+
+### Go to /settings and switch design
 
