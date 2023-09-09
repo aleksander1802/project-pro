@@ -85,6 +85,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
             >
               <IconDeprecated
                 width={24}
+                key={viewType.view}
                 height={24}
                 Svg={viewType.icon}
                 className={classNames('', {

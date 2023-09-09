@@ -75,6 +75,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
             >
               {({ active, selected }) => (
                 <li
+                  key={item.value}
                   className={classNames(cls.item, {
                     [popupCls.active]: active,
                     [popupCls.disabled]: item.disabled,
