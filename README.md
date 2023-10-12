@@ -221,7 +221,7 @@ Clear.args = {
 
 ## Deploy
 
-  ### [Deploy](https://spectacular-lily-915483.netlify.app/)
+  ### [Deploy](https://meek-panda-9e5407.netlify.app/)
 
 ## Signin
 
